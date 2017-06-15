@@ -46,8 +46,8 @@ app.get('/about', function(req, res, next) {
 // Sign Up POST
 app.post('/register', function(req, res) {
     console.log(req.body);
-    res.send('Post Page');
-})
+    res.render('index');
+});
 
 // Init start server function
 startServer();
@@ -57,5 +57,5 @@ function startServer() {
     var server = app.listen(8000, function() {
         var port = server.address().port;
         console.log('Listening on port ' + port);
-    })
-}
+    });
+};
