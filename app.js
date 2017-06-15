@@ -22,7 +22,15 @@ var data = {
 // Index route
 app.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'The front page'
+        title: 'The Front Page'
+    });
+});
+
+// About Me route
+app.get('/about', function(req, res, next) {
+    res.render('about', {
+        title: 'About Me',
+        person: data
     });
 });
 
